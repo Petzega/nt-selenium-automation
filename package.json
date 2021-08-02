@@ -1,0 +1,14 @@
+{
+  "name": "nt-selenium-automation",
+  "version": "1.0.0",
+  "description": "Automatizacion Nuevas Tecnologias",
+  "main": "index.js",
+  "scripts": {
+    "report": "node index.js"
+  },
+  "author": "Peter Zegarra",
+  "license": "ISC",
+  "devDependencies": {
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  }
+}
