@@ -29,6 +29,7 @@ public class BasePage {
     public String parentHandle = "";
 
     public void setWebDriver(WebDriver driver) {BasePage.driver = driver;}
+    public static WebDriver handleDriver(){return driver;}
     public enum properties {DISPLAYED, VISIBLE, SELECTED;}
 
     public WebElement wait(String objName) {
@@ -63,6 +64,19 @@ public class BasePage {
         } catch (AssertionError e) {
             e.getMessage();
             Assert.fail("Fallo el scrooll", e);
+        }
+    }
+
+    public void doTypeText(String objName, String text) {
+        try {
+            WebElement element = wait(objName);
+            element.clear();
+            element.sendKeys(text);
+        } catch (AssertionError e) {
+            e.getMessage();
+            e.getStackTrace();
+            e.printStackTrace();
+            Assert.fail("Fallo en agregar texto", e);
         }
     }
 

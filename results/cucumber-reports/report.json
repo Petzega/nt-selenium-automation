@@ -12,49 +12,49 @@
         "steps": [
           {
             "result": {
-              "duration": 21832110300,
+              "duration": 12869165800,
               "status": "passed"
             },
             "line": 6,
             "name": "El usuario ingresa al modulo de Configuracion Estados",
             "match": {
-              "location": "T001_ModuloConfiguracionEstados.el_usuario_ingresa_al_modulo_de_Configuracion_Estados()"
+              "location": "T001_ConfEstadosCrearRegistro.el_usuario_ingresa_al_modulo_de_Configuracion_Estados()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2268735000,
+              "duration": 6554169300,
               "status": "passed"
             },
             "line": 7,
             "name": "Da click al boton Nuevo y completa los campos obligagores",
             "match": {
-              "location": "T001_ModuloConfiguracionEstados.da_click_al_boton_Nuevo_y_completa_los_campos_obligagores()"
+              "location": "T001_ConfEstadosCrearRegistro.da_click_al_boton_Nuevo_y_completa_los_campos_obligagores()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 13600,
+              "duration": 3004132100,
               "status": "passed"
             },
             "line": 8,
             "name": "Da click al boton Guardar confirmando el registro",
             "match": {
-              "location": "T001_ModuloConfiguracionEstados.da_click_al_boton_Guardar_confirmando_el_registro()"
+              "location": "T001_ConfEstadosCrearRegistro.da_click_al_boton_Guardar_confirmando_el_registro()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 11799,
+              "duration": 12436621200,
               "status": "passed"
             },
             "line": 9,
             "name": "Se crea correctamente el nuevo registro",
             "match": {
-              "location": "T001_ModuloConfiguracionEstados.se_crea_correctamente_el_nuevo_registro()"
+              "location": "T001_ConfEstadosCrearRegistro.se_crea_correctamente_el_nuevo_registro()"
             },
             "keyword": "Then "
           }

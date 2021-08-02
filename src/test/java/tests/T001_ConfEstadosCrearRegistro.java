@@ -1,20 +1,23 @@
 package tests;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.*;
 import helpers.BasePage;
 import helpers.Hook;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import pageObjects.P000_PermisosNavegador;
-import pageObjects.P001_CrearRegistro;
+import pageObjects.PO_001_FlujoGeneral.P000_PermisosNavegador;
+import pageObjects.PO_002_FlujoConfEstadosCrearRegistro.P001_CrearRegistro;
+import pageObjects.PO_002_FlujoConfEstadosCrearRegistro.P002_GuardarRegistro;
+import pageObjects.PO_002_FlujoConfEstadosCrearRegistro.P003_ValidarRegistro;
 
-public class T001_ModuloConfiguracionEstados {
+public class T001_ConfEstadosCrearRegistro {
     public WebDriver driver;
     private Hook hook = new Hook();
     BasePage basePage = new BasePage();
     P000_PermisosNavegador p000_permisosNavegador = new P000_PermisosNavegador();
     P001_CrearRegistro p001_crearRegistro = new P001_CrearRegistro();
+    P002_GuardarRegistro p002_guardarRegistro = new P002_GuardarRegistro();
+    P003_ValidarRegistro p003_validarRegistro = new P003_ValidarRegistro();
 
     @Given("^El usuario ingresa al modulo de Configuracion Estados$")
     public void el_usuario_ingresa_al_modulo_de_Configuracion_Estados() throws Throwable {
@@ -36,13 +39,22 @@ public class T001_ModuloConfiguracionEstados {
         }
     }
 
-    @When("^Da click al boton Guardar confirmando el registro$")
+    @And("^Da click al boton Guardar confirmando el registro$")
     public void da_click_al_boton_Guardar_confirmando_el_registro() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
+        try {
+            p002_guardarRegistro.saveNewRegister();
+        } catch (AssertionError e) {
+            e.printStackTrace();
+        }
     }
 
     @Then("^Se crea correctamente el nuevo registro$")
     public void se_crea_correctamente_el_nuevo_registro() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
+        try {
+            p003_validarRegistro.validateRegister();
+            //Hook.closeBrowser(basePage.handleDriver());
+        } catch (AssertionError e) {
+            e.printStackTrace();
+        }
     }
 }

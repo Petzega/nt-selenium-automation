@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects.PO_001_FlujoGeneral;
 
 import helpers.BasePage;
 import org.junit.Assert;
