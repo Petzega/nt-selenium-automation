@@ -16,6 +16,7 @@ public class P001_CrearRegistro extends BasePage {
     String txt_referencia = "//*[contains(@placeholder,'Referencia')]";
 
     public void createNewRegister() {
+        System.out.println("P001");
         try {
             doClick(btn_nuevo);
             doScrollToElement(cb_sistema);
@@ -29,5 +30,6 @@ public class P001_CrearRegistro extends BasePage {
         } catch (AssertionError | IOException | AWTException e) {
             e.printStackTrace();
         }
+        System.out.println("Fin P001");
     }
 }

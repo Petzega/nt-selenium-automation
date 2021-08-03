@@ -52,7 +52,7 @@ public class T001_ConfEstadosCrearRegistro {
     public void se_crea_correctamente_el_nuevo_registro() throws Throwable {
         try {
             p003_validarRegistro.validateRegister();
-            //Hook.closeBrowser(basePage.handleDriver());
+            Hook.closeBrowser(basePage.handleDriver());
         } catch (AssertionError e) {
             e.printStackTrace();
         }

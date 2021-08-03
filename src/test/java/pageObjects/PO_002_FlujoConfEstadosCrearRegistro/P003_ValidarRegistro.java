@@ -3,24 +3,21 @@ package pageObjects.PO_002_FlujoConfEstadosCrearRegistro;
 import helpers.BasePage;
 import org.junit.Assert;
 
-public class P003_ValidarRegistro extends BasePage {
-    String lbl_id = "//td[contains(text(),'1')]";
-    String lbl_estado = "//td[contains(text(),'AUTO_STATE')]";
-    String lbl_subOrden = "//td[contains(text(),'Mixto')]";
-    String lbl_descripcion = "//td[contains(text(),'AUTO_DESC')]";
-    String lbl_referencia = "//td[contains(text(),'AUTO_REF')]";
+import java.awt.*;
+import java.io.IOException;
 
-    public void validateRegister() {
+public class P003_ValidarRegistro extends BasePage {
+    String lbl_registro = "//td[contains(text(),'1')]/following-sibling::td[contains(text(),'AUTO_STATE')]" +
+            "/following-sibling::td[contains(text(),'AUTO_REsF')]";
+
+    public void validateRegister() throws IOException, AWTException {
+        System.out.println("P003");
         try {
-            if(validateObject(lbl_estado, "DISPLAYED")
-            && validateObject(lbl_subOrden, "DISPLAYED") && validateObject(lbl_descripcion, "DISPLAYED")
-            && validateObject(lbl_referencia, "DISPLAYED")) {
-                System.out.println("Registro creado correctamente");
-            } else {
-                System.out.println("Registro no creado");
-            }
-        } catch (AssertionError | InterruptedException e) {
+            System.out.println("sibling: " + validateObject(lbl_registro, "DISPLAYED"));
+            Assert.assertTrue("Se redirecciona al modulo Configuracion Estados", validateObject(lbl_registro, "DISPLAYED"));
+        } catch ( InterruptedException e) {
             e.printStackTrace();
         }
+        System.out.println("Fin P003");
     }
 }
