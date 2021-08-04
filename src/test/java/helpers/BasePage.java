@@ -102,9 +102,6 @@ public class BasePage {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        if (ActualPropertyValue) {
-            return true;
-        }
-        return false;
+        return ActualPropertyValue;
     }
 }

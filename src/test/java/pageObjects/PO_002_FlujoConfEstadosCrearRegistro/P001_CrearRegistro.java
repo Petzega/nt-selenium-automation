@@ -1,6 +1,7 @@
 package pageObjects.PO_002_FlujoConfEstadosCrearRegistro;
 
 import helpers.BasePage;
+import org.junit.Assert;
 
 import java.awt.*;
 import java.io.IOException;
@@ -15,20 +16,21 @@ public class P001_CrearRegistro extends BasePage {
     String txt_descripcion = "id|mat-input-2";
     String txt_referencia = "//*[contains(@placeholder,'Referencia')]";
 
-    public void createNewRegister() {
+    public void createNewRegister(){
         System.out.println("P001");
         try {
             doClick(btn_nuevo);
             doScrollToElement(cb_sistema);
             doClick(cb_sistema);
             doClick(li_sd);
-            doTypeText(txt_estado, "AUTO_STATE");
+            doTypeText(txt_estado, "AUTO_STATE_1");
             doClick(cb_subOrden);
             doClick(li_so);
-            doTypeText(txt_descripcion, "AUTO_DESC");
-            doTypeText(txt_referencia, "AUTO_REF");
-        } catch (AssertionError | IOException | AWTException e) {
+            doTypeText(txt_descripcion, "AUTO_DESC_1");
+            doTypeText(txt_referencia, "AUTO_REF_1");
+        } catch (IOException | AWTException e) {
             e.printStackTrace();
+            Assert.fail("Error al ingresar los datos de registro");
         }
         System.out.println("Fin P001");
     }

@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 22278969000,
+              "duration": 22055241600,
               "status": "passed"
             },
             "line": 6,
@@ -24,11 +24,11 @@
           },
           {
             "result": {
-              "duration": 6909530700,
+              "duration": 5971645800,
               "status": "passed"
             },
             "line": 7,
-            "name": "Da click al boton Nuevo y completa los campos obligagores",
+            "name": "Da click al boton Nuevo y completa los campos obligatorios",
             "match": {
               "location": "T001_ConfEstadosCrearRegistro.da_click_al_boton_Nuevo_y_completa_los_campos_obligagores()"
             },
@@ -36,8 +36,9 @@
           },
           {
             "result": {
-              "duration": 180500,
-              "status": "passed"
+              "duration": 6745405900,
+              "error_message": "java.lang.AssertionError: Falla And: Error al guardar registro\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat tests.T001_ConfEstadosCrearRegistro.da_click_al_boton_Guardar_confirmando_el_registro(T001_ConfEstadosCrearRegistro.java:51)\r\n\tat ✽.And Da click al boton Guardar confirmando el registro(F001_ModuloConfiguracionEstados.feature:8)\r\n",
+              "status": "failed"
             },
             "line": 8,
             "name": "Da click al boton Guardar confirmando el registro",
@@ -48,8 +49,7 @@
           },
           {
             "result": {
-              "duration": 16164909900,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 9,
             "name": "Se crea correctamente el nuevo registro",

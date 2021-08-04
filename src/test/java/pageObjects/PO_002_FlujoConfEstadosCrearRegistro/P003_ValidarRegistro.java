@@ -7,13 +7,12 @@ import java.awt.*;
 import java.io.IOException;
 
 public class P003_ValidarRegistro extends BasePage {
-    String lbl_registro = "//td[contains(text(),'1')]/following-sibling::td[contains(text(),'AUTO_STATE')]" +
-            "/following-sibling::td[contains(text(),'AUTO_REsF')]";
+    String lbl_registro = "//td[contains(text(),'1')]/following-sibling::td[contains(text(),'AUTO_STATE_1')]" +
+            "/following-sibling::td[contains(text(),'AUTO_REF_1')]";
 
-    public void validateRegister() throws IOException, AWTException {
+    public void validateRegister() {
         System.out.println("P003");
         try {
-            System.out.println("sibling: " + validateObject(lbl_registro, "DISPLAYED"));
             Assert.assertTrue("Se redirecciona al modulo Configuracion Estados", validateObject(lbl_registro, "DISPLAYED"));
         } catch ( InterruptedException e) {
             e.printStackTrace();
