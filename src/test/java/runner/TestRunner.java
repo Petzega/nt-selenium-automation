@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         tags = {"@SmokeTest"}
 )
 public class TestRunner {
-    //@AfterClass
+    @AfterClass
     public static void createReportJS() {
         try {
             System.out.println("Generando reporte JS");

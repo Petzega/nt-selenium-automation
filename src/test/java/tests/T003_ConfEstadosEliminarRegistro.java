@@ -1,6 +1,9 @@
 package tests;
 
-import cucumber.api.java.en.*;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import helpers.BasePage;
 import helpers.Hook;
 import org.junit.Assert;
@@ -10,7 +13,7 @@ import pageObjects.PO_003_FlujoConfEstadosEditarRegistro.P001_EditarRegistro;
 import pageObjects.PO_003_FlujoConfEstadosEditarRegistro.P002_GuardarEditarRegistro;
 import pageObjects.PO_003_FlujoConfEstadosEditarRegistro.P003_ValidarEditarRegistro;
 
-public class T002_ConfEstadosEditarRegistro {
+public class T003_ConfEstadosEliminarRegistro {
     public WebDriver driver;
     private Hook hook = new Hook();
     BasePage basePage = new BasePage();

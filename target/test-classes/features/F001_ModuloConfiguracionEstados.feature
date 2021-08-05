@@ -8,7 +8,7 @@ Feature: Realizar CRUD en el modulo de Configuracion Estados
     And     Da click al boton Guardar confirmando el registro
     Then    Se crea correctamente el nuevo registro
 
-#  @SmokeTest
+  @SmokeTest
   Scenario: Editar registro de tipo Sistema de Despacho
     Given   El usuario accede al modulo de Configuracion Estados
     When    Da click al boton de Editar y cambia los campos

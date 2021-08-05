@@ -21,8 +21,8 @@ report.generate({
             {label: 'Project', value: 'Custom project'},
             {label: 'Release', value: '1.2.3'},
             {label: 'Cycle', value: 'B11221.34321'},
-            {label: 'Execution Start Time', value: 'Nov 19th 2017, 02:31 PM EST'},
-            {label: 'Execution End Time', value: 'Nov 19th 2017, 02:56 PM EST'}
+            {label: 'Execution Start Time', value: 'Aug 2nd 2021, 09:31 AM'},
+            {label: 'Execution End Time', value: 'Aug 2nd 2021, 09:31 AM'}
         ]
     }
 });

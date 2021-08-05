@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 22055241600,
+              "duration": 23079683200,
               "status": "passed"
             },
             "line": 6,
@@ -24,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 5971645800,
+              "duration": 6813315000,
               "status": "passed"
             },
             "line": 7,
@@ -36,9 +36,8 @@
           },
           {
             "result": {
-              "duration": 6745405900,
-              "error_message": "java.lang.AssertionError: Falla And: Error al guardar registro\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat tests.T001_ConfEstadosCrearRegistro.da_click_al_boton_Guardar_confirmando_el_registro(T001_ConfEstadosCrearRegistro.java:51)\r\n\tat ✽.And Da click al boton Guardar confirmando el registro(F001_ModuloConfiguracionEstados.feature:8)\r\n",
-              "status": "failed"
+              "duration": 12009785500,
+              "status": "passed"
             },
             "line": 8,
             "name": "Da click al boton Guardar confirmando el registro",
@@ -49,7 +48,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 3924919000,
+              "status": "passed"
             },
             "line": 9,
             "name": "Se crea correctamente el nuevo registro",
@@ -62,6 +62,70 @@
         "tags": [
           {
             "line": 4,
+            "name": "@SmokeTest"
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "Editar registro de tipo Sistema de Despacho",
+        "description": "",
+        "id": "realizar-crud-en-el-modulo-de-configuracion-estados;editar-registro-de-tipo-sistema-de-despacho",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 20483399900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "El usuario accede al modulo de Configuracion Estados",
+            "match": {
+              "location": "T002_ConfEstadosEditarRegistro.el_usuario_accede_al_modulo_de_Configuracion_Estados()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7551161600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Da click al boton de Editar y cambia los campos",
+            "match": {
+              "location": "T002_ConfEstadosEditarRegistro.da_click_al_boton_de_Editar_y_cambia_los_campos()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5497615100,
+              "error_message": "java.lang.AssertionError: Falla And: Error al guardar edicion de registro\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat tests.T002_ConfEstadosEditarRegistro.da_click_al_boton_Guardar_confirmando_la_edicion(T002_ConfEstadosEditarRegistro.java:49)\r\n\tat ✽.And Da click al boton Guardar confirmando la edicion(F001_ModuloConfiguracionEstados.feature:15)\r\n",
+              "status": "failed"
+            },
+            "line": 15,
+            "name": "Da click al boton Guardar confirmando la edicion",
+            "match": {
+              "location": "T002_ConfEstadosEditarRegistro.da_click_al_boton_Guardar_confirmando_la_edicion()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "Se edita correctamente el nuevo registro",
+            "match": {
+              "location": "T002_ConfEstadosEditarRegistro.se_edita_correctamente_el_nuevo_registro()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 11,
             "name": "@SmokeTest"
           }
         ]

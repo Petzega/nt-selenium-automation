@@ -48,7 +48,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Aug 4, 2021 01:12:32 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Aug 5, 2021 01:24:23 PM</span>
 				</a>
 			</li>
 			<li>
@@ -151,10 +151,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -166,10 +166,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>2</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>6</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='12.5%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='12.5%'>1</span> others
 				</div>
 			</div>
 		</div>
@@ -186,15 +186,15 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Realizar CRUD en el modulo de Configuracion Estados</span>
-						<span class='test-time'>Aug 4, 2021 01:12:32 PM</span>
+						<span class='test-time'>Aug 5, 2021 01:24:23 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
-<div class='scenario node' test-id='2' status='fail'>
+<div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
 		<span class='category label white-text'>@SmokeTest</span>
 	</div>
-	<span class='duration right label'>0h 0m 34s+849ms</span>
+	<span class='duration right label'>0h 0m 45s+948ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">Crear nuevo registro de tipo Sistema de Despacho</span>
@@ -216,23 +216,67 @@
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='5' class='node and fail' status='fail'>
+		<li test-id='5' class='node and pass' status='pass'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And Da click al boton Guardar confirmando el registro</span>
-				<div class='pre'><pre>java.lang.AssertionError: Falla And: Error al guardar registro
-	at org.junit.Assert.fail(Assert.java:88)
-	at tests.T001_ConfEstadosCrearRegistro.da_click_al_boton_Guardar_confirmando_el_registro(T001_ConfEstadosCrearRegistro.java:51)
-	at ✽.And Da click al boton Guardar confirmando el registro(F001_ModuloConfiguracionEstados.feature:8)
-</pre></div>
+				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='6' class='node then skip' status='skip'>
+		<li test-id='6' class='node then pass' status='pass'>
 			
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then Se crea correctamente el nuevo registro</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='7' status='fail'>
+	<div class='category-list'>
+		<span class='category label white-text'>@SmokeTest</span>
+	</div>
+	<span class='duration right label'>0h 0m 33s+551ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Editar registro de tipo Sistema de Despacho</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='8' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given El usuario accede al modulo de Configuracion Estados</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='9' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When Da click al boton de Editar y cambia los campos</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='10' class='node and fail' status='fail'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And Da click al boton Guardar confirmando la edicion</span>
+				<div class='pre'><pre>java.lang.AssertionError: Falla And: Error al guardar edicion de registro
+	at org.junit.Assert.fail(Assert.java:88)
+	at tests.T002_ConfEstadosEditarRegistro.da_click_al_boton_Guardar_confirmando_la_edicion(T002_ConfEstadosEditarRegistro.java:49)
+	at ✽.And Da click al boton Guardar confirmando la edicion(F001_ModuloConfiguracionEstados.feature:15)
+</pre></div>
+			
+		</li>
+		<li test-id='11' class='node then skip' status='skip'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then Se edita correctamente el nuevo registro</span>
 				<div class='pre'>skipped</div>
 			
 		</li>
@@ -294,12 +338,13 @@
 					<div class='category-heading'>
 						<span class='category-name'>@SmokeTest</span>
 						<span class='category-status right'>
+							<span class='label pass'>1</span>
 							<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							
+							<span class='label green accent-4 white-text'>Passed: 1</span>
 							<span class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
@@ -315,8 +360,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 4, 2021 01:12:32 PM</td>
+										<td>Aug 5, 2021 01:24:23 PM</td>
 										<td class='linked' test-id='2'>Realizar CRUD en el modulo de Configuracion Estados.Crear nuevo registro de tipo Sistema de Despacho</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 5, 2021 01:25:09 PM</td>
+										<td class='linked' test-id='7'>Realizar CRUD en el modulo de Configuracion Estados.Editar registro de tipo Sistema de Despacho</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
@@ -378,12 +428,12 @@
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Aug 4, 2021 01:13:01 PM</td>
-                                                        <td class='linked' test-id='5'>Realizar CRUD en el modulo de Configuracion Estados.Crear nuevo registro de tipo Sistema de Despacho.And Da click al boton Guardar confirmando el registro</td>
-                                                        <td><pre><pre>java.lang.AssertionError: Falla And: Error al guardar registro
+                                                        <td>Aug 5, 2021 01:25:37 PM</td>
+                                                        <td class='linked' test-id='10'>Realizar CRUD en el modulo de Configuracion Estados.Editar registro de tipo Sistema de Despacho.And Da click al boton Guardar confirmando la edicion</td>
+                                                        <td><pre><pre>java.lang.AssertionError: Falla And: Error al guardar edicion de registro
 	at org.junit.Assert.fail(Assert.java:88)
-	at tests.T001_ConfEstadosCrearRegistro.da_click_al_boton_Guardar_confirmando_el_registro(T001_ConfEstadosCrearRegistro.java:51)
-	at ✽.And Da click al boton Guardar confirmando el registro(F001_ModuloConfiguracionEstados.feature:8)
+	at tests.T002_ConfEstadosEditarRegistro.da_click_al_boton_Guardar_confirmando_la_edicion(T002_ConfEstadosEditarRegistro.java:49)
+	at ✽.And Da click al boton Guardar confirmando la edicion(F001_ModuloConfiguracionEstados.feature:15)
 </pre></pre></td>
                                                     </tr>
                                         </tbody>
@@ -416,31 +466,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>8</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 4, 2021 01:12:32 PM</div>
+					<div class='panel-lead'>Aug 5, 2021 01:24:23 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 4, 2021 01:13:07 PM</div>
+			 		<div class='panel-lead'>Aug 5, 2021 01:25:43 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>34,917ms</div>
+					<div class='panel-lead'>79,641ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -457,11 +507,11 @@
 						</tr>
 						<tr>
 							<td>@SmokeTest</td>
-							<td>0</td>
+							<td>1</td>
 							<td>1</td>
 							<td>0</td>
 							<td>
-									0%
+									50%
 							</td>
 						</tr>
 					</table>
@@ -485,7 +535,7 @@
 				skipParent: 0,
 				exceptionsParent: 1,
 				
-				passChild: 0,
+				passChild: 1,
 				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
@@ -494,7 +544,7 @@
 				infoChild: 0,
 				exceptionsChild: 1,
 				
-				passGrandChild: 2,
+				passGrandChild: 6,
 				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
