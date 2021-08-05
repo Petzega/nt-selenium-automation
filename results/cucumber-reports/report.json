@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 23079683200,
+              "duration": 21386817800,
               "status": "passed"
             },
             "line": 6,
@@ -24,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 6813315000,
+              "duration": 6133830700,
               "status": "passed"
             },
             "line": 7,
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 12009785500,
+              "duration": 11864540800,
               "status": "passed"
             },
             "line": 8,
@@ -48,7 +48,7 @@
           },
           {
             "result": {
-              "duration": 3924919000,
+              "duration": 3744102500,
               "status": "passed"
             },
             "line": 9,
@@ -76,7 +76,7 @@
         "steps": [
           {
             "result": {
-              "duration": 20483399900,
+              "duration": 8732734200,
               "status": "passed"
             },
             "line": 13,
@@ -88,7 +88,7 @@
           },
           {
             "result": {
-              "duration": 7551161600,
+              "duration": 6855281100,
               "status": "passed"
             },
             "line": 14,
@@ -100,9 +100,8 @@
           },
           {
             "result": {
-              "duration": 5497615100,
-              "error_message": "java.lang.AssertionError: Falla And: Error al guardar edicion de registro\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat tests.T002_ConfEstadosEditarRegistro.da_click_al_boton_Guardar_confirmando_la_edicion(T002_ConfEstadosEditarRegistro.java:49)\r\n\tat ✽.And Da click al boton Guardar confirmando la edicion(F001_ModuloConfiguracionEstados.feature:15)\r\n",
-              "status": "failed"
+              "duration": 10287749700,
+              "status": "passed"
             },
             "line": 15,
             "name": "Da click al boton Guardar confirmando la edicion",
@@ -113,7 +112,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 3784728800,
+              "status": "passed"
             },
             "line": 16,
             "name": "Se edita correctamente el nuevo registro",
@@ -126,6 +126,70 @@
         "tags": [
           {
             "line": 11,
+            "name": "@SmokeTest"
+          }
+        ]
+      },
+      {
+        "line": 19,
+        "name": "Eliminar registro de tipo Sistema de Despacho",
+        "description": "",
+        "id": "realizar-crud-en-el-modulo-de-configuracion-estados;eliminar-registro-de-tipo-sistema-de-despacho",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 20215560200,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "El usuario ingresa al monitor de Configuracion Estados",
+            "match": {
+              "location": "T003_ConfEstadosEliminarRegistro.el_usuario_ingresa_al_monitor_de_Configuracion_Estados()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 16461995600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Realiza la busqueda de un registro",
+            "match": {
+              "location": "T003_ConfEstadosEliminarRegistro.realiza_la_busqueda_de_un_registro()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10227846700,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Da click al boton Eliminar confirmando la eliminacion",
+            "match": {
+              "location": "T003_ConfEstadosEliminarRegistro.da_click_al_boton_Eliminar_confirmando_la_eliminacion()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14023888200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Se elimina correctamente el nuevo registro",
+            "match": {
+              "location": "T003_ConfEstadosEliminarRegistro.se_elimina_correctamente_el_nuevo_registro()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 18,
             "name": "@SmokeTest"
           }
         ]

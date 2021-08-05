@@ -7,28 +7,27 @@ import java.awt.*;
 import java.io.IOException;
 
 public class P001_BuscarRegistro extends BasePage {
-    String btn_nuevo = "//*[contains(text(),'Nuevo')]";
-    String cb_sistema = "cssSelector|#mat-select-1 > div > div.mat-select-value.ng-tns-c73-3";
-    String li_sd = "id|mat-option-19";
-    String txt_estado = "id|mat-input-1";
-    String cb_subOrden = "cssSelector|#mat-select-2 > div > div.mat-select-arrow-wrapper.ng-tns-c73-5";
-    String li_so = "id|mat-option-25";
-    String txt_descripcion = "id|mat-input-2";
-    String txt_referencia = "//*[contains(@placeholder,'Referencia')]";
+    String cb_sistema = "/html/body/app-root/app-list-status/div/div/mat-card/div[2]/form/div[1]/div[1]/div[1]/div[2]/mat-form-field/div/div[1]";
+    String li_sistema = "//span[contains(text(),'SISTEMA DE DESPACHO')]";
+    String txt_estado = "name|statusName";
+    String btn_buscar = "//*[contains(text(),'Buscar')]";
+    String lbl_error = "id|message";
 
-    public void createNewRegister(){
+    public void searchRegister() throws Throwable{
         System.out.println("P001");
         try {
-            doClick(btn_nuevo);
-            doScrollToElement(cb_sistema);
             doClick(cb_sistema);
-            doClick(li_sd);
-            doTypeText(txt_estado, "AUTO_STATE_1");
-            doClick(cb_subOrden);
-            doClick(li_so);
-            doTypeText(txt_descripcion, "AUTO_DESC_1");
-            doTypeText(txt_referencia, "AUTO_REF_1");
-        } catch (IOException | AWTException e) {
+            doClick(li_sistema);
+            doTypeText(txt_estado, "AUTO_STATE_1.5");
+            doClick(btn_buscar);
+            Thread.sleep(5000);
+            boolean validate = validateObject(lbl_error, "DISPLAYED");
+            if (validate) {
+                Assert.assertFalse("Registro no existe", validate);
+            } else {
+                Assert.assertFalse("Registro encontrado", validate);
+            }
+        } catch (AssertionError e) {
             e.printStackTrace();
             Assert.fail("Error al ingresar los datos de registro");
         }
