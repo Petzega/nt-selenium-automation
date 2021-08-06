@@ -1,4 +1,4 @@
-package tests;
+package tests.ConfEstados;
 
 import cucumber.api.java.en.*;
 import helpers.BasePage;
@@ -26,19 +26,19 @@ public class T001_ConfEstadosCrearRegistro {
             p000_permisosNavegador.getPrivacy();
         } catch (AssertionError e) {
             e.printStackTrace();
-            Assert.fail("Falla Given: No se pudo ingresar al modulo");
             Hook.closeBrowser(basePage.handleDriver());
+            Assert.fail("Falla Given: No se pudo ingresar al modulo");
         }
     }
 
-    @When("^Da click al boton Nuevo y completa los campos obligatorios$")
-    public void da_click_al_boton_Nuevo_y_completa_los_campos_obligagores() throws Throwable {
+    @When("^Da click al boton Nuevo y completar los campos obligatorios$")
+    public void da_click_al_boton_Nuevo_y_completar_los_campos_obligagores() throws Throwable {
         try {
             p001_crearRegistro.createNewRegister();
         } catch (AssertionError e) {
             e.printStackTrace();
-            Assert.fail("Falla When: Error al ingresar los valores en el formulario");
             Hook.closeBrowser(basePage.handleDriver());
+            Assert.fail("Falla When: Error al ingresar los valores en el formulario");
         }
     }
 
@@ -48,8 +48,8 @@ public class T001_ConfEstadosCrearRegistro {
             p002_guardarNuevoRegistro.saveNewRegister();
         } catch (AssertionError e) {
             e.printStackTrace();
-            Assert.fail("Falla And: Error al guardar nuevo registro");
             Hook.closeBrowser(basePage.handleDriver());
+            Assert.fail("Falla And: Error al guardar nuevo registro");
         }
     }
 
@@ -60,8 +60,8 @@ public class T001_ConfEstadosCrearRegistro {
             Hook.closeBrowser(basePage.handleDriver());
         } catch (AssertionError e) {
             e.printStackTrace();
-            Assert.fail("Falla Then: No se encuentra el registro");
             Hook.closeBrowser(basePage.handleDriver());
+            Assert.fail("Falla Then: No se encuentra el registro");
         }
     }
 }

@@ -1,4 +1,4 @@
-package tests;
+package tests.ConfEstados;
 
 import cucumber.api.java.en.*;
 import helpers.BasePage;
@@ -26,8 +26,8 @@ public class T002_ConfEstadosEditarRegistro {
             p000_permisosNavegador.getPrivacy();
         } catch (AssertionError e) {
             e.printStackTrace();
-            Assert.fail("Falla Given: No se pudo ingresar al modulo");
             Hook.closeBrowser(basePage.handleDriver());
+            Assert.fail("Falla Given: No se pudo ingresar al modulo");
         }
     }
 
@@ -36,8 +36,8 @@ public class T002_ConfEstadosEditarRegistro {
         try {
             p001_editarRegistro.editNewRegister();
         } catch (AssertionError e) {
-            Assert.fail("Falla When: Error al ingresar los valores en el formulario");
             Hook.closeBrowser(basePage.handleDriver());
+            Assert.fail("Falla When: Error al ingresar los valores en el formulario");
         }
     }
 
@@ -46,8 +46,8 @@ public class T002_ConfEstadosEditarRegistro {
         try {
             p002_guardarEditarRegistro.saveEditRegister();
         } catch (AssertionError e) {
-            Assert.fail("Falla And: Error al guardar edicion de registro");
             Hook.closeBrowser(basePage.handleDriver());
+            Assert.fail("Falla And: Error al guardar edicion de registro");
         }
     }
 
@@ -58,8 +58,8 @@ public class T002_ConfEstadosEditarRegistro {
             Hook.closeBrowser(basePage.handleDriver());
         } catch (AssertionError e) {
             e.printStackTrace();
-            Assert.fail("Falla Then: No se encuentra el registro");
             Hook.closeBrowser(basePage.handleDriver());
+            Assert.fail("Falla Then: No se encuentra el registro");
         }
     }
 }

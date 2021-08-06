@@ -7,14 +7,15 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features",
+        //features = "src/test/resources/features/F001_ModuloConfiguracionEstados.feature",
+        features = "src/test/resources/features/F002_ModuloConfiguracionSubEstados.feature",
         glue = {"tests"},
         plugin = {"com.vimalselvam.cucumber.listener.ExtentCucumberFormatter:results/cucumber-reports/report.html",
                 "json:results/cucumber-reports/report.json"},
         tags = {"@SmokeTest"}
 )
 public class TestRunner {
-    @AfterClass
+    //@AfterClass
     public static void createReportJS() {
         try {
             System.out.println("Generando reporte JS");

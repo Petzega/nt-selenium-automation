@@ -47,7 +47,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Aug 5, 2021 04:19:02 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Aug 6, 2021 02:53:55 PM</span>
 				</a>
 			</li>
 			<li>
@@ -148,7 +148,7 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -163,7 +163,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>12</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -182,8 +182,8 @@
 				
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Realizar CRUD en el modulo de Configuracion Estados</span>
-						<span class='test-time'>Aug 5, 2021 04:19:02 PM</span>
+						<span class='test-name'>Realizar CRUD en el modulo de Configuracion SubEstados</span>
+						<span class='test-time'>Aug 6, 2021 02:53:55 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -191,17 +191,17 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@SmokeTest</span>
 	</div>
-	<span class='duration right label'>0h 0m 43s+201ms</span>
+	<span class='duration right label'>0h 0m 0s+282ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
-		<span class="desc-text">Crear nuevo registro de tipo Sistema de Despacho</span>
+		<span class="desc-text">Crear nuevo registro de tipo Sistema de Despacho en el monitor de SubEstados</span>
 	</div>
 	<ul class='steps'>
 		<li test-id='3' class='node given pass' status='pass'>
 			
 			<b>Given</b>
 			
-			<span class="bdd-step-name">Given El usuario ingresa al modulo de Configuracion Estados</span>
+			<span class="bdd-step-name">Given El usuario ingresa al modulo de Configuracion SubEstados</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -209,7 +209,7 @@
 			
 			<b>When</b>
 			
-			<span class="bdd-step-name">When Da click al boton Nuevo y completa los campos obligatorios</span>
+			<span class="bdd-step-name">When Da click al boton Nuevo y completar el formulario</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -217,7 +217,7 @@
 			
 			<b>And</b>
 			
-			<span class="bdd-step-name">And Da click al boton Guardar confirmando el registro</span>
+			<span class="bdd-step-name">And Da click al boton Guardar y confirmar el registro</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -225,95 +225,7 @@
 			
 			<b>Then</b>
 			
-			<span class="bdd-step-name">Then Se crea correctamente el nuevo registro</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='7' status='pass'>
-	<div class='category-list'>
-		<span class='category label white-text'>@SmokeTest</span>
-	</div>
-	<span class='duration right label'>0h 0m 29s+683ms</span>
-	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">Editar registro de tipo Sistema de Despacho</span>
-	</div>
-	<ul class='steps'>
-		<li test-id='8' class='node given pass' status='pass'>
-			
-			<b>Given</b>
-			
-			<span class="bdd-step-name">Given El usuario accede al modulo de Configuracion Estados</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='9' class='node when pass' status='pass'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When Da click al boton de Editar y cambia los campos</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='10' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And Da click al boton Guardar confirmando la edicion</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='11' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then Se edita correctamente el nuevo registro</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='12' status='pass'>
-	<div class='category-list'>
-		<span class='category label white-text'>@SmokeTest</span>
-	</div>
-	<span class='duration right label'>0h 1m 0s+935ms</span>
-	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">Eliminar registro de tipo Sistema de Despacho</span>
-	</div>
-	<ul class='steps'>
-		<li test-id='13' class='node given pass' status='pass'>
-			
-			<b>Given</b>
-			
-			<span class="bdd-step-name">Given El usuario ingresa al monitor de Configuracion Estados</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='14' class='node when pass' status='pass'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When Realiza la busqueda de un registro</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='15' class='node and pass' status='pass'>
-			
-			<b>And</b>
-			
-			<span class="bdd-step-name">And Da click al boton Eliminar confirmando la eliminacion</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='16' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then Se elimina correctamente el nuevo registro</span>
+			<span class="bdd-step-name">Then Se crea correctamente el nuevo registro de subestado</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -375,12 +287,12 @@
 					<div class='category-heading'>
 						<span class='category-name'>@SmokeTest</span>
 						<span class='category-status right'>
-							<span class='label pass'>3</span>
+							<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 3</span>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
 						</div>
@@ -396,18 +308,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 5, 2021 04:19:02 PM</td>
-										<td class='linked' test-id='2'>Realizar CRUD en el modulo de Configuracion Estados.Crear nuevo registro de tipo Sistema de Despacho</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>Aug 5, 2021 04:19:45 PM</td>
-										<td class='linked' test-id='7'>Realizar CRUD en el modulo de Configuracion Estados.Editar registro de tipo Sistema de Despacho</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>Aug 5, 2021 04:20:15 PM</td>
-										<td class='linked' test-id='12'>Realizar CRUD en el modulo de Configuracion Estados.Eliminar registro de tipo Sistema de Despacho</td>
+										<td>Aug 6, 2021 02:53:55 PM</td>
+										<td class='linked' test-id='2'>Realizar CRUD en el modulo de Configuracion SubEstados.Crear nuevo registro de tipo Sistema de Despacho en el monitor de SubEstados</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -442,31 +344,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>12</div>
+					<div class='panel-lead'>4</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 5, 2021 04:19:02 PM</div>
+					<div class='panel-lead'>Aug 6, 2021 02:53:55 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 5, 2021 04:21:16 PM</div>
+			 		<div class='panel-lead'>Aug 6, 2021 02:53:55 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>133,911ms</div>
+					<div class='panel-lead'>415ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -483,7 +385,7 @@
 						</tr>
 						<tr>
 							<td>@SmokeTest</td>
-							<td>3</td>
+							<td>1</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -511,7 +413,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 3,
+				passChild: 1,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -520,7 +422,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 12,
+				passGrandChild: 4,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,

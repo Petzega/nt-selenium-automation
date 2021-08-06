@@ -4,57 +4,57 @@
     "elements": [
       {
         "line": 5,
-        "name": "Crear nuevo registro de tipo Sistema de Despacho",
+        "name": "Crear nuevo registro de tipo Sistema de Despacho en el monitor de SubEstados",
         "description": "",
-        "id": "realizar-crud-en-el-modulo-de-configuracion-estados;crear-nuevo-registro-de-tipo-sistema-de-despacho",
+        "id": "realizar-crud-en-el-modulo-de-configuracion-subestados;crear-nuevo-registro-de-tipo-sistema-de-despacho-en-el-monitor-de-subestados",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 21386817800,
+              "duration": 147933500,
               "status": "passed"
             },
             "line": 6,
-            "name": "El usuario ingresa al modulo de Configuracion Estados",
+            "name": "El usuario ingresa al modulo de Configuracion SubEstados",
             "match": {
-              "location": "T001_ConfEstadosCrearRegistro.el_usuario_ingresa_al_modulo_de_Configuracion_Estados()"
+              "location": "T001_ConfSubEstadosCrearRegistro.el_usuario_ingresa_al_modulo_de_Configuracion_SubEstados()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 6133830700,
+              "duration": 31700,
               "status": "passed"
             },
             "line": 7,
-            "name": "Da click al boton Nuevo y completa los campos obligatorios",
+            "name": "Da click al boton Nuevo y completar el formulario",
             "match": {
-              "location": "T001_ConfEstadosCrearRegistro.da_click_al_boton_Nuevo_y_completa_los_campos_obligagores()"
+              "location": "T001_ConfSubEstadosCrearRegistro.da_click_al_boton_Nuevo_y_completar_el_formulario()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 11864540800,
+              "duration": 29100,
               "status": "passed"
             },
             "line": 8,
-            "name": "Da click al boton Guardar confirmando el registro",
+            "name": "Da click al boton Guardar y confirmar el registro",
             "match": {
-              "location": "T001_ConfEstadosCrearRegistro.da_click_al_boton_Guardar_confirmando_el_registro()"
+              "location": "T001_ConfSubEstadosCrearRegistro.da_click_al_boton_Guardar_y_confirmar_el_registro()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 3744102500,
+              "duration": 38800,
               "status": "passed"
             },
             "line": 9,
-            "name": "Se crea correctamente el nuevo registro",
+            "name": "Se crea correctamente el nuevo registro de subestado",
             "match": {
-              "location": "T001_ConfEstadosCrearRegistro.se_crea_correctamente_el_nuevo_registro()"
+              "location": "T001_ConfSubEstadosCrearRegistro.se_crea_correctamente_el_nuevo_registro_de_subestado()"
             },
             "keyword": "Then "
           }
@@ -65,140 +65,12 @@
             "name": "@SmokeTest"
           }
         ]
-      },
-      {
-        "line": 12,
-        "name": "Editar registro de tipo Sistema de Despacho",
-        "description": "",
-        "id": "realizar-crud-en-el-modulo-de-configuracion-estados;editar-registro-de-tipo-sistema-de-despacho",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 8732734200,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "El usuario accede al modulo de Configuracion Estados",
-            "match": {
-              "location": "T002_ConfEstadosEditarRegistro.el_usuario_accede_al_modulo_de_Configuracion_Estados()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 6855281100,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "Da click al boton de Editar y cambia los campos",
-            "match": {
-              "location": "T002_ConfEstadosEditarRegistro.da_click_al_boton_de_Editar_y_cambia_los_campos()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 10287749700,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "Da click al boton Guardar confirmando la edicion",
-            "match": {
-              "location": "T002_ConfEstadosEditarRegistro.da_click_al_boton_Guardar_confirmando_la_edicion()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 3784728800,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "Se edita correctamente el nuevo registro",
-            "match": {
-              "location": "T002_ConfEstadosEditarRegistro.se_edita_correctamente_el_nuevo_registro()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 11,
-            "name": "@SmokeTest"
-          }
-        ]
-      },
-      {
-        "line": 19,
-        "name": "Eliminar registro de tipo Sistema de Despacho",
-        "description": "",
-        "id": "realizar-crud-en-el-modulo-de-configuracion-estados;eliminar-registro-de-tipo-sistema-de-despacho",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 20215560200,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "El usuario ingresa al monitor de Configuracion Estados",
-            "match": {
-              "location": "T003_ConfEstadosEliminarRegistro.el_usuario_ingresa_al_monitor_de_Configuracion_Estados()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 16461995600,
-              "status": "passed"
-            },
-            "line": 21,
-            "name": "Realiza la busqueda de un registro",
-            "match": {
-              "location": "T003_ConfEstadosEliminarRegistro.realiza_la_busqueda_de_un_registro()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 10227846700,
-              "status": "passed"
-            },
-            "line": 22,
-            "name": "Da click al boton Eliminar confirmando la eliminacion",
-            "match": {
-              "location": "T003_ConfEstadosEliminarRegistro.da_click_al_boton_Eliminar_confirmando_la_eliminacion()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 14023888200,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "Se elimina correctamente el nuevo registro",
-            "match": {
-              "location": "T003_ConfEstadosEliminarRegistro.se_elimina_correctamente_el_nuevo_registro()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 18,
-            "name": "@SmokeTest"
-          }
-        ]
       }
     ],
-    "name": "Realizar CRUD en el modulo de Configuracion Estados",
-    "description": "Como usuario final necesito realizar un CRUD en el modulo de Configuracion Estados",
-    "id": "realizar-crud-en-el-modulo-de-configuracion-estados",
+    "name": "Realizar CRUD en el modulo de Configuracion SubEstados",
+    "description": "Como usuario final necesito realizar un CRUD en el modulo de Configuracion SubEstados",
+    "id": "realizar-crud-en-el-modulo-de-configuracion-subestados",
     "keyword": "Feature",
-    "uri": "F001_ModuloConfiguracionEstados.feature"
+    "uri": "src/test/resources/features/F002_ModuloConfiguracionSubEstados.feature"
   }
 ]

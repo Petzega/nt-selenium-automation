@@ -1,4 +1,4 @@
-package tests;
+package tests.ConfEstados;
 
 import cucumber.api.java.en.*;
 import helpers.BasePage;
