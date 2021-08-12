@@ -3,74 +3,73 @@
     "line": 1,
     "elements": [
       {
-        "line": 5,
-        "name": "Crear nuevo registro de tipo Sistema de Despacho en el monitor de SubEstados",
+        "line": 12,
+        "name": "Editar registro de tipo Sistema de Despacho",
         "description": "",
-        "id": "realizar-crud-en-el-modulo-de-configuracion-subestados;crear-nuevo-registro-de-tipo-sistema-de-despacho-en-el-monitor-de-subestados",
+        "id": "realizar-crud-en-el-modulo-de-configuracion-estados;editar-registro-de-tipo-sistema-de-despacho",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 147933500,
+              "duration": 21037127600,
               "status": "passed"
             },
-            "line": 6,
-            "name": "El usuario ingresa al modulo de Configuracion SubEstados",
+            "line": 13,
+            "name": "El usuario accede al modulo de Configuracion Estados",
             "match": {
-              "location": "T001_ConfSubEstadosCrearRegistro.el_usuario_ingresa_al_modulo_de_Configuracion_SubEstados()"
+              "location": "T002_ConfEstadosEditarRegistro.el_usuario_accede_al_modulo_de_Configuracion_Estados()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 31700,
-              "status": "passed"
+              "duration": 14797671200,
+              "error_message": "java.lang.NullPointerException\r\n\tat helpers.BasePage.doTypeText(BasePage.java:73)\r\n\tat pageObjects.PO_001_FlujoGeneral.P001_ModificarRegistros.editNewRegister(P001_ModificarRegistros.java:52)\r\n\tat tests.ConfEstados.T002_ConfEstadosEditarRegistro.da_click_al_boton_de_Editar_y_cambia_los_campos(T002_ConfEstadosEditarRegistro.java:43)\r\n\tat ✽.When Da click al boton de Editar y cambia los campos(src/test/resources/features/F001_ModuloConfiguracionEstados.feature:14)\r\n",
+              "status": "failed"
             },
-            "line": 7,
-            "name": "Da click al boton Nuevo y completar el formulario",
+            "line": 14,
+            "name": "Da click al boton de Editar y cambia los campos",
             "match": {
-              "location": "T001_ConfSubEstadosCrearRegistro.da_click_al_boton_Nuevo_y_completar_el_formulario()"
+              "location": "T002_ConfEstadosEditarRegistro.da_click_al_boton_de_Editar_y_cambia_los_campos()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 29100,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 8,
-            "name": "Da click al boton Guardar y confirmar el registro",
+            "line": 15,
+            "name": "Da click al boton Guardar confirmando la edicion",
             "match": {
-              "location": "T001_ConfSubEstadosCrearRegistro.da_click_al_boton_Guardar_y_confirmar_el_registro()"
+              "location": "T002_ConfEstadosEditarRegistro.da_click_al_boton_Guardar_confirmando_la_edicion()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 38800,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 9,
-            "name": "Se crea correctamente el nuevo registro de subestado",
+            "line": 16,
+            "name": "Se edita correctamente el nuevo registro",
             "match": {
-              "location": "T001_ConfSubEstadosCrearRegistro.se_crea_correctamente_el_nuevo_registro_de_subestado()"
+              "location": "T002_ConfEstadosEditarRegistro.se_edita_correctamente_el_nuevo_registro()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "line": 4,
+            "line": 11,
             "name": "@SmokeTest"
           }
         ]
       }
     ],
-    "name": "Realizar CRUD en el modulo de Configuracion SubEstados",
-    "description": "Como usuario final necesito realizar un CRUD en el modulo de Configuracion SubEstados",
-    "id": "realizar-crud-en-el-modulo-de-configuracion-subestados",
+    "name": "Realizar CRUD en el modulo de Configuracion Estados",
+    "description": "Como usuario final necesito realizar un CRUD en el modulo de Configuracion Estados",
+    "id": "realizar-crud-en-el-modulo-de-configuracion-estados",
     "keyword": "Feature",
-    "uri": "src/test/resources/features/F002_ModuloConfiguracionSubEstados.feature"
+    "uri": "src/test/resources/features/F001_ModuloConfiguracionEstados.feature"
   }
 ]

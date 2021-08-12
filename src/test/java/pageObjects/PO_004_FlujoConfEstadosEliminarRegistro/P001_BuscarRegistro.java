@@ -21,7 +21,7 @@ public class P001_BuscarRegistro extends BasePage {
             doTypeText(txt_estado, "AUTO_STATE_1.5");
             doClick(btn_buscar);
             Thread.sleep(5000);
-            boolean validate = validateObject(lbl_error, "DISPLAYED");
+            boolean validate = validateObjectByProperty(lbl_error, "DISPLAYED");
             if (validate) {
                 Assert.assertFalse("Registro no existe", validate);
             } else {

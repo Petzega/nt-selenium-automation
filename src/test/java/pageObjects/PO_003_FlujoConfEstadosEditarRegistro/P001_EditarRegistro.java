@@ -24,7 +24,7 @@ public class P001_EditarRegistro extends BasePage {
     public void editNewRegister() throws Throwable {
         System.out.println("P001");
         try {
-            boolean validate = validateObject(lbl_registro, "DISPLAYED");
+            boolean validate = validateObjectByProperty(lbl_registro, "DISPLAYED");
             if (validate) {
                 doClick(btn_editar);
                 doTypeText(txt_estado, "AUTO_STATE_1.5");

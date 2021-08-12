@@ -1,7 +1,7 @@
 Feature: Realizar CRUD en el modulo de Configuracion Estados
   Como usuario final necesito realizar un CRUD en el modulo de Configuracion Estados
 
-  @SmokeTest
+  #@SmokeTest
   Scenario: Crear nuevo registro de tipo Sistema de Despacho
     Given   El usuario ingresa al modulo de Configuracion Estados
     When    Da click al boton Nuevo y completar los campos obligatorios
@@ -15,7 +15,7 @@ Feature: Realizar CRUD en el modulo de Configuracion Estados
     And     Da click al boton Guardar confirmando la edicion
     Then    Se edita correctamente el nuevo registro
 
-  @SmokeTest
+  #@SmokeTest
   Scenario: Eliminar registro de tipo Sistema de Despacho
     Given   El usuario ingresa al monitor de Configuracion Estados
     When    Realiza la busqueda de un registro

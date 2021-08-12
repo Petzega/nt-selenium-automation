@@ -10,7 +10,7 @@ public class P003_ValidarEditarRegistro extends BasePage {
     public void validateEditRegister() {
         System.out.println("P003");
         try {
-            Assert.assertTrue("Se edito el registro correctamente", validateObject(lbl_registro, "DISPLAYED"));
+            Assert.assertTrue("Se edito el registro correctamente", validateObjectByProperty(lbl_registro, "DISPLAYED"));
         } catch ( InterruptedException e) {
             e.printStackTrace();
             Assert.fail("Error al editar registro");

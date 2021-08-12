@@ -24,7 +24,7 @@ import org.testng.Assert;
 
 public class BasePage {
     public static WebDriver driver;
-    public int waitingTime = 5;
+    public int waitingTime = 10;
     public int waitingLongTime = 120;
     public String parentHandle = "";
 
@@ -62,7 +62,7 @@ public class BasePage {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].scrollIntoView();", element);
         } catch (AssertionError e) {
-            e.getMessage();
+            e.printStackTrace();
             Assert.fail("Fallo el scrooll", e);
         }
     }
@@ -73,14 +73,12 @@ public class BasePage {
             element.clear();
             element.sendKeys(text);
         } catch (AssertionError e) {
-            e.getMessage();
-            e.getStackTrace();
             e.printStackTrace();
             Assert.fail("Fallo en agregar texto", e);
         }
     }
 
-    public boolean validateObject(String objName, String PropertyToBeVerified) throws InterruptedException {
+    public boolean validateObjectByProperty(String objName, String PropertyToBeVerified) throws InterruptedException {
         boolean ActualPropertyValue = false;
         String prop = PropertyToBeVerified.toUpperCase();
         Thread.sleep(3000);
@@ -101,7 +99,21 @@ public class BasePage {
             }
         } catch (Exception e) {
             e.printStackTrace();
+            Assert.fail("No se encuentra el objeto con la propiedad", e);
         }
         return ActualPropertyValue;
+    }
+
+    public boolean validateObjectExists(String objName) {
+        boolean response = false;
+        try {
+            WebElement element = wait(objName);
+            if (driver.findElements(By.xpath(objName)).size() != 0) {
+                response = true;
+            }
+        } catch (AssertionError e) {
+            Assert.fail("No se encuentra el objeto", e);
+        }
+        return response;
     }
 }

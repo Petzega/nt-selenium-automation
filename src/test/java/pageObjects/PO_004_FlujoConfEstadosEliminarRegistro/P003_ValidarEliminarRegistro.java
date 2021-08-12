@@ -15,7 +15,7 @@ public class P003_ValidarEliminarRegistro extends BasePage {
             doClick(cmb_habilitado);
             doClick(btn_buscar);
             Thread.sleep(5000);
-            Assert.assertTrue("Se elimino el registro correctamente", validateObject(lbl_registro, "DISPLAYED"));
+            Assert.assertTrue("Se elimino el registro correctamente", validateObjectByProperty(lbl_registro, "DISPLAYED"));
             Thread.sleep(3000);
         } catch (AssertionError e) {
             Assert.fail("Error al eliminar registro");

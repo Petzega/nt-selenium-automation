@@ -14,7 +14,7 @@ public class P002_ConfirmarEliminarRegistro extends BasePage {
         try {
             doClick(btn_eliminar);
             doClick(btn_aceptar);
-            boolean validate = validateObject(lbl_error, "DISPLAYED");
+            boolean validate = validateObjectByProperty(lbl_error, "DISPLAYED");
         } catch (AssertionError e) {
             Assert.fail("Error al guardar registro");
         }

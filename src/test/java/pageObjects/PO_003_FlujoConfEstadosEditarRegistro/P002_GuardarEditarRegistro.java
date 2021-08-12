@@ -15,7 +15,7 @@ public class P002_GuardarEditarRegistro extends BasePage {
         try {
             doClick(btn_guardar);
             doClick(btn_aceptar);
-            boolean validate = validateObject(lbl_error, "DISPLAYED");
+            boolean validate = validateObjectByProperty(lbl_error, "DISPLAYED");
             if (validate) {
                 Assert.assertFalse("Registro existente", validate);
             } else {

@@ -6,18 +6,18 @@ import helpers.Hook;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pageObjects.PO_001_FlujoGeneral.P000_PermisosNavegador;
-import pageObjects.PO_002_FlujoConfEstadosCrearRegistro.P001_CrearRegistro;
-import pageObjects.PO_002_FlujoConfEstadosCrearRegistro.P002_GuardarNuevoRegistro;
-import pageObjects.PO_002_FlujoConfEstadosCrearRegistro.P003_ValidarNuevoRegistro;
+import pageObjects.PO_001_FlujoGeneral.P001_ModificarRegistros;
+import pageObjects.PO_001_FlujoGeneral.P002_GuardarRegistros;
+import pageObjects.PO_001_FlujoGeneral.P003_ValidarRegistros;
 
 public class T001_ConfEstadosCrearRegistro {
     public WebDriver driver;
     private Hook hook = new Hook();
     BasePage basePage = new BasePage();
     P000_PermisosNavegador p000_permisosNavegador = new P000_PermisosNavegador();
-    P001_CrearRegistro p001_crearRegistro = new P001_CrearRegistro();
-    P002_GuardarNuevoRegistro p002_guardarNuevoRegistro = new P002_GuardarNuevoRegistro();
-    P003_ValidarNuevoRegistro p003_validarNuevoRegistro = new P003_ValidarNuevoRegistro();
+    P001_ModificarRegistros p001_modificarRegistros = new P001_ModificarRegistros();
+    P002_GuardarRegistros p002_guardarRegistros = new P002_GuardarRegistros();
+    P003_ValidarRegistros p003_validarRegistros = new P003_ValidarRegistros();
 
     @Given("^El usuario ingresa al modulo de Configuracion Estados$")
     public void el_usuario_ingresa_al_modulo_de_Configuracion_Estados() throws Throwable {
@@ -34,7 +34,7 @@ public class T001_ConfEstadosCrearRegistro {
     @When("^Da click al boton Nuevo y completar los campos obligatorios$")
     public void da_click_al_boton_Nuevo_y_completar_los_campos_obligagores() throws Throwable {
         try {
-            p001_crearRegistro.createNewRegister();
+            p001_modificarRegistros.createNewRegister();
         } catch (AssertionError e) {
             e.printStackTrace();
             Hook.closeBrowser(basePage.handleDriver());
@@ -45,7 +45,7 @@ public class T001_ConfEstadosCrearRegistro {
     @And("^Da click al boton Guardar confirmando el registro$")
     public void da_click_al_boton_Guardar_confirmando_el_registro() throws Throwable {
         try {
-            p002_guardarNuevoRegistro.saveNewRegister();
+            p002_guardarRegistros.saveNewRegister();
         } catch (AssertionError e) {
             e.printStackTrace();
             Hook.closeBrowser(basePage.handleDriver());
@@ -56,7 +56,7 @@ public class T001_ConfEstadosCrearRegistro {
     @Then("^Se crea correctamente el nuevo registro$")
     public void se_crea_correctamente_el_nuevo_registro() throws Throwable {
         try {
-            p003_validarNuevoRegistro.validateNewRegister();
+            p003_validarRegistros.validateNewRegister();
             Hook.closeBrowser(basePage.handleDriver());
         } catch (AssertionError e) {
             e.printStackTrace();

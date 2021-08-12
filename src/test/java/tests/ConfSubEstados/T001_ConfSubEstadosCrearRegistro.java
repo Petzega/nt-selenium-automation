@@ -18,14 +18,15 @@ public class T001_ConfSubEstadosCrearRegistro {
     private Hook hook = new Hook();
     BasePage basePage = new BasePage();
     P000_PermisosNavegador p000_permisosNavegador = new P000_PermisosNavegador();
+    P001_CrearRegistro p001_crearRegistro = new P001_CrearRegistro();
+
 
     @Given("^El usuario ingresa al modulo de Configuracion SubEstados$")
     public void el_usuario_ingresa_al_modulo_de_Configuracion_SubEstados() throws Throwable {
         try {
-            //driver = hook.browser("CHROME", "https://tottus-msrvqa.tottus.com/schn/trazability/tot-traz-web/PE/status");
-            //p000_permisosNavegador.getPrivacy();
+            driver = hook.browser("CHROME", "https://tottus-msrvqa.tottus.com/schn/trazability/tot-traz-web/PE/status/sub-status");
+            p000_permisosNavegador.getPrivacy();
         } catch (AssertionError e) {
-            e.printStackTrace();
             Hook.closeBrowser(basePage.handleDriver());
             Assert.fail("Falla Given: No se pudo ingresar al modulo");
         }
@@ -34,8 +35,8 @@ public class T001_ConfSubEstadosCrearRegistro {
     @When("^Da click al boton Nuevo y completar el formulario$")
     public void da_click_al_boton_Nuevo_y_completar_el_formulario() throws Throwable {
         try {
+            p001_crearRegistro.searchRegister();
         } catch (AssertionError e) {
-            e.printStackTrace();
             Hook.closeBrowser(basePage.handleDriver());
             Assert.fail("Falla When: Error al ingresar los valores en el formulario");
         }
@@ -45,7 +46,6 @@ public class T001_ConfSubEstadosCrearRegistro {
     public void da_click_al_boton_Guardar_y_confirmar_el_registro() throws Throwable {
         try {
         } catch (AssertionError e) {
-            e.printStackTrace();
             Hook.closeBrowser(basePage.handleDriver());
             Assert.fail("Falla And: Error al guardar nuevo registro");
         }
@@ -54,9 +54,8 @@ public class T001_ConfSubEstadosCrearRegistro {
     @Then("^Se crea correctamente el nuevo registro de subestado$")
     public void se_crea_correctamente_el_nuevo_registro_de_subestado() throws Throwable {
         try {
-            //Hook.closeBrowser(basePage.handleDriver());
+            Hook.closeBrowser(basePage.handleDriver());
         } catch (AssertionError e) {
-            e.printStackTrace();
             Hook.closeBrowser(basePage.handleDriver());
             Assert.fail("Falla Then: No se encuentra el registro");
         }

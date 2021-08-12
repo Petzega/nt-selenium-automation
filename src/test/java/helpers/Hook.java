@@ -36,7 +36,7 @@ public class Hook {
     }
 
     public static void closeBrowser(WebDriver iDriver) {
-        System.out.println("en cerrar browser");
+        System.out.println("Se cierra browser");
         iDriver.quit();
     }
 }
