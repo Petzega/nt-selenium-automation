@@ -21,6 +21,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
 
 public class BasePage {
     public static WebDriver driver;
@@ -116,4 +118,19 @@ public class BasePage {
         }
         return response;
     }
+/*
+    public void jsScrollIntoView(String UIName, String objTechName, boolean screenshot) throws Exception {
+        try {
+            WebElement   element =wait(UIName, objTechName);
+            JavascriptExecutor jse = (JavascriptExecutor) driver;
+            jse.executeScript("arguments[0].scrollIntoView()", element);
+        } catch (AssertionError e) {
+            e.getMessage();
+            e.getStackTrace();
+            e.printStackTrace();
+            Assert.fail("Fallo el scrolldown_js",e);
+            utilitarios.takeScreenshot("ERROR_ScrollDown_JS_" + UIName, driver);
+            ScreenshotUtility.saveAccion("ERROR_ScrollDown_JS_" + UIName);
+        }
+    }*/
 }

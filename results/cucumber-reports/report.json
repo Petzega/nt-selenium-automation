@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 21037127600,
+              "duration": 22393384000,
               "status": "passed"
             },
             "line": 13,
@@ -24,9 +24,8 @@
           },
           {
             "result": {
-              "duration": 14797671200,
-              "error_message": "java.lang.NullPointerException\r\n\tat helpers.BasePage.doTypeText(BasePage.java:73)\r\n\tat pageObjects.PO_001_FlujoGeneral.P001_ModificarRegistros.editNewRegister(P001_ModificarRegistros.java:52)\r\n\tat tests.ConfEstados.T002_ConfEstadosEditarRegistro.da_click_al_boton_de_Editar_y_cambia_los_campos(T002_ConfEstadosEditarRegistro.java:43)\r\n\tat ✽.When Da click al boton de Editar y cambia los campos(src/test/resources/features/F001_ModuloConfiguracionEstados.feature:14)\r\n",
-              "status": "failed"
+              "duration": 5589237000,
+              "status": "passed"
             },
             "line": 14,
             "name": "Da click al boton de Editar y cambia los campos",
@@ -37,7 +36,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 106300,
+              "status": "passed"
             },
             "line": 15,
             "name": "Da click al boton Guardar confirmando la edicion",
@@ -48,7 +48,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 793011000,
+              "status": "passed"
             },
             "line": 16,
             "name": "Se edita correctamente el nuevo registro",

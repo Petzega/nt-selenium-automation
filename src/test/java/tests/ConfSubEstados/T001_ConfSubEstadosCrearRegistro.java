@@ -9,16 +9,14 @@ import helpers.Hook;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import pageObjects.PO_001_FlujoGeneral.P000_PermisosNavegador;
-import pageObjects.PO_002_FlujoConfEstadosCrearRegistro.P001_CrearRegistro;
-import pageObjects.PO_002_FlujoConfEstadosCrearRegistro.P002_GuardarNuevoRegistro;
-import pageObjects.PO_002_FlujoConfEstadosCrearRegistro.P003_ValidarNuevoRegistro;
+import pageObjects.PO_001_FlujoGeneral.P001_ModificarRegistros;
 
 public class T001_ConfSubEstadosCrearRegistro {
     public WebDriver driver;
     private Hook hook = new Hook();
     BasePage basePage = new BasePage();
     P000_PermisosNavegador p000_permisosNavegador = new P000_PermisosNavegador();
-    P001_CrearRegistro p001_crearRegistro = new P001_CrearRegistro();
+    P001_ModificarRegistros p001_modificarRegistros = new P001_ModificarRegistros();
 
 
     @Given("^El usuario ingresa al modulo de Configuracion SubEstados$")
@@ -35,7 +33,7 @@ public class T001_ConfSubEstadosCrearRegistro {
     @When("^Da click al boton Nuevo y completar el formulario$")
     public void da_click_al_boton_Nuevo_y_completar_el_formulario() throws Throwable {
         try {
-            p001_crearRegistro.searchRegister();
+            p001_modificarRegistros.searchRegister();
         } catch (AssertionError e) {
             Hook.closeBrowser(basePage.handleDriver());
             Assert.fail("Falla When: Error al ingresar los valores en el formulario");

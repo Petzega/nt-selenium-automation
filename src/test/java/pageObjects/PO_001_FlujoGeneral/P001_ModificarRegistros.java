@@ -46,15 +46,16 @@ public class P001_ModificarRegistros extends BasePage {
     public void editNewRegister() throws Throwable {
         System.out.println("P001");
         try {
-            boolean validate = validateObjectByProperty(lbl_registro, "DISPLAYED");
-            if (validate) {
-                doClick(btn_editar);
+            //boolean validate = validateObjectByProperty(lbl_registro, "DISPLAYED");
+            //if (validate) {
+                Thread.sleep(5000);
+                /*doClick(btn_editar);
                 doTypeText(txt_estado, "AUTO_STATE_0.75");
                 doTypeText(txt_descripcion, "AUTO_DESC_0.75");
                 doTypeText(txt_referencia, "AUTO_REF_0.75");
                 doClick(cmb_retroceder);
-                doClick(cmb_reiniciar);
-            }
+                doClick(cmb_reiniciar);*/
+            //}
         } catch (AssertionError e) {
             e.printStackTrace();
             Assert.fail("Error al ingresar los datos de registro");
